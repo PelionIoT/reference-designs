@@ -1,0 +1,79 @@
+{
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedTLSConfig_mbedOS.h\"",
+        "PAL_USER_DEFINED_CONFIGURATION=\"sotp_fs_config_MbedOS.h\"",
+        "MBED_CLIENT_USER_CONFIG_FILE=\"mbed_cloud_client_user_config.h\"",
+        "MBED_CLOUD_CLIENT_USER_CONFIG_FILE=\"mbed_cloud_client_user_config.h\"",
+        "PAL_DTLS_PEER_MIN_TIMEOUT=5000",
+        "MBED_CONF_APP_MAIN_STACK_SIZE=5000",
+        "ARM_UC_USE_PAL_BLOCKDEVICE=1",
+        "MBED_CLOUD_CLIENT_UPDATE_STORAGE=ARM_UCP_FLASHIAP_BLOCKDEVICE"
+    ],
+    "target_overrides": {
+        "*": {
+            "platform.stdio-baud-rate": 115200,
+            "platform.stdio-convert-newlines": true,
+            "mbed-trace.enable": false,
+            "update-client.storage-address"  : "(1024*1024*3)",
+            "update-client.storage-size"     : "(1024*1024*1)",
+            "update-client.storage-locations": 1
+        },
+        "MTB_MXCHIP_EMW3166": {
+            "target.mbed_app_start"            : "0x08010400",
+            "update-client.bootloader-details" : "(0x08000000+30*1024)",
+            "update-client.application-details": "(0x08000000+64*1024)",
+            "sotp-section-1-address"           : "0x080C0000",
+            "sotp-section-1-size"              : "(128*1024)",
+            "sotp-section-2-address"           : "0x080E0000",
+            "sotp-section-2-size"              : "(128*1024)",
+            "sotp-num-sections"                : 2
+        }
+    },
+    "config": {
+        "format-storage-layer-on-error": {
+            "help": "Whether to format the storage layer when it cannot be read - always disable for production devices!",
+            "value": 1
+        },
+        "developer-mode": {
+            "help": "Enable Developer mode to skip Factory enrollment",
+            "value": 1
+        },
+        "wifi-ssid": {
+            "help": "WiFi SSID",
+            "value": "\"mbed_pe\""
+        },
+        "wifi-password": {
+            "help": "WiFi Password",
+            "value": "\"ilovembed\""
+        },
+        "sotp-section-1-address": {
+            "help": "Flash sector address for SOTP sector 1",
+            "macro_name": "PAL_INTERNAL_FLASH_SECTION_1_ADDRESS",
+            "value": null
+        },
+        "sotp-section-1-size": {
+            "help": "Flash sector size for SOTP sector 1",
+            "macro_name": "PAL_INTERNAL_FLASH_SECTION_1_SIZE",
+            "value": null
+        },
+        "sotp-section-2-address": {
+            "help": "Flash sector address for SOTP sector 2",
+            "macro_name": "PAL_INTERNAL_FLASH_SECTION_2_ADDRESS",
+            "value": null
+        },
+        "sotp-section-2-size": {
+            "help": "Flash sector size for SOTP sector 2",
+            "macro_name": "PAL_INTERNAL_FLASH_SECTION_2_SIZE",
+            "value": null
+        },
+        "sotp-num-sections": {
+            "help": "Number of SOTP sections",
+            "macro_name": "PAL_INT_FLASH_NUM_SECTIONS",
+            "value": null
+        },
+        "enable_info": {
+            "macro_name": "MBED_LFS_ENABLE_INFO",
+            "value": null
+        }
+    }
+}
