@@ -1,9 +1,10 @@
-# H1 Introduction:
-    This reference design is for the MXCHIP EMW3166 module and uses the MTB / MCB HW for implementation. The example uses "mbed-cloud-client" library that handles all the connection, registration and LWM2M resources. The example simulates a button press every 5 seconds and relays the packet to Arm Pelion IoT platform.
+# Introduction:
 
-    The reference application also currently works on Mbed OS v5.9.5 and Mbed Cloud Client v1.3.3.
+This reference design is for the MXCHIP EMW3166 module and uses the MTB / MCB HW for implementation. The example uses "mbed-cloud-client" library that handles all the connection, registration and LWM2M resources. The example simulates a button press every 5 seconds and relays the packet to Arm Pelion IoT platform.
 
-# H1 Pre-requisites:
+The reference application also currently works on Mbed OS v5.9.5 and Mbed Cloud Client v1.3.3.
+
+# Pre-requisites:
 1. Hardware:
     * MXCHIP EMW3166 MTB / MCB with SPI flash + micro USB cable.
     * A WiFi access point.
@@ -14,7 +15,7 @@
     * Both the above tools will be combined into mbed CLI (via command ``` dm ``` in a later release of mbed CLI)
     * Pelion account for API keys & developer certificate.
 
-#H1 Getting started:
+# Getting started:
 1. Import this example to your local machine with mbed CLI:
     ``` mbed import https://github.com/ARMmbed/reference-designs.git ```
 
@@ -70,7 +71,7 @@
 9. Change mbed_app.json in the root of the reference application i.e. 
 "update-client.storage-address"  : "(1024*1024*64)"
 10. Change main.cpp in source to match SD card
-#H3 IMPORTANT: The required lines are already supplied in the code. Uncomment appropriate lines in main.cpp and build the binary.
+### IMPORTANT: The required lines are already supplied in the code. Uncomment appropriate lines in main.cpp and build the binary.
 
 11. Combine with the bootloader using the supplied script in ../tools/ .
 ``` $> python tools/combine_bootloader_with_app.py -m MTB_MXCHIP_EMW3166 -a BUILD/MTB_MXCHIP_EMW3166/ARM/mbed-cloud-example.bin -o combined.bin ```
@@ -86,7 +87,7 @@
 
 14. Congratulations, your device is now connected to Pelion IoT platform. Please proceed to the FW update section now.
 
-#H3 Recommendation:  
+## Recommendation:  
 Increase stack size:         "MBED_CONF_APP_MAIN_STACK_SIZE=5000", to 6K if using newer versions of Mbed OS  
 
 Demonstrate a remote Firmware update:
