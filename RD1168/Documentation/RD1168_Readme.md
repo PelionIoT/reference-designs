@@ -90,7 +90,8 @@ The reference application also currently works on Mbed OS v5.9.5 and Mbed Cloud 
 ## Recommendation:  
 Increase stack size:         "MBED_CONF_APP_MAIN_STACK_SIZE=5000", to 6K if using newer versions of Mbed OS  
 
-#Demonstrate a remote Firmware update:
+
+# Demonstrate a remote Firmware update:
 
 1. In order to update FW on a connected device, you will need the manifest tool. Please note that in a later release of Mbed OS & Mbed CLI, the manifest tool is integrated into the Mbed CLI (via the dm command) and you wouldn't need to manually install this.
 
@@ -104,7 +105,7 @@ Install the manifest tool via : ``` pip install git+https://github.com/ARMmbed/m
 	* Ensure you copy the API key generated as this is visible only once.
 	
 4. Initialize the certificates for your application:
-##IMPORTANT: You must initialize the certificates before you flash the device for the 1st time as these certificates need to be embedded within the device in order for it to receive remote updates.
+## IMPORTANT: You must initialize the certificates before you flash the device for the 1st time as these certificates need to be embedded within the device in order for it to receive remote updates.
 
 ``` manifest-tool init -a <api key> -S <mbed cloud API URL> -d <domain name> -m <model ID> --force ```
 
@@ -141,6 +142,7 @@ Note the use of --force as this option overrides the defaults provided in the ap
 
 The logs should look like this on a serial terminal:
 
+```
 ..\Modules\Reference_Apps\RD1168\mbed-cloud-example>mbed sterm -b 115200 -r
 [mbed] Detecting connected targets/boards to your system...
 [mbed] Opening serial terminal to "MTB_MXCHIP_EMW3166"
@@ -255,3 +257,4 @@ Simulated button clicked 13 times
 Simulated button clicked 14 times
 Simulated button clicked 15 times
 
+```
