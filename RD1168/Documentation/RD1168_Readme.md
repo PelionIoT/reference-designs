@@ -293,3 +293,5 @@ Simulated button clicked 30 times
 Simulated button clicked 31 times
 
 ```
+
+## Also note that the device ID remains the same after the FW update. This indicates that the SOTP regions were not over-written while perfoming the update.
