@@ -23,5 +23,5 @@ Built on mbedOS, and includes Pelion Device Manager. This application has been c
 | Release | mbed OS | mbed Cloud Client | Release Date | Comment |
 | --- | --- | --- | --- | --- | 
 |v1.0 | 5.9.5	| 1.3.3	| 14/09/2018 | Initial Release
+| |  |  |   | 
 			
-RD1168
