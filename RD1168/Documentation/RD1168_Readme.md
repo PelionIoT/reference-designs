@@ -64,7 +64,7 @@ The reference application also currently works on Mbed OS v5.9.5 and Mbed Cloud 
  ```   "update-client.storage-address"  : "(1024*1024*64)",  ```
    
 7. Once changes are made in bootloader, build it:
-``` mbed compile -t ARM -m MTB_MXCHIP_EMW3166 ```
+``` mbed compile -t GCC_ARM -m MTB_MXCHIP_EMW3166 ```
 
 8. Copy the generated binary to ../tools/ directory. Rename to match the existing file name.
 
@@ -93,9 +93,9 @@ Increase stack size:         "MBED_CONF_APP_MAIN_STACK_SIZE=5000", to 6K if usin
 
 # Demonstrate a remote Firmware update:
 
-1. In order to update FW on a connected device, you will need the manifest tool. Please note that in a later release of Mbed OS & Mbed CLI, the manifest tool is integrated into the Mbed CLI (via the dm command) and you wouldn't need to manually install this.
+1. In order to update FW on a connected device, you will need the manifest tool. Please note that in a later release of Mbed OS (5.10 & above) & Mbed CLI (1.8.0 and above), the manifest tool is integrated into the Mbed CLI (via the dm command) and you wouldn't need to manually install this. But, if using earlier versions then, you have to manually install this using:
 
-Install the manifest tool via : ``` pip install git+https://github.com/ARMmbed/manifest-tool --upgrade ```
+ ``` pip install git+https://github.com/ARMmbed/manifest-tool --upgrade ```
 
 2. A dependency is to install the python SDK along with the manifest tool. This is done using : ``` pip install mbed-cloud-sdk --upgrade ```
 
@@ -107,7 +107,9 @@ Install the manifest tool via : ``` pip install git+https://github.com/ARMmbed/m
 4. Initialize the certificates for your application:
 ## IMPORTANT: You must initialize the certificates before you flash the device for the 1st time as these certificates need to be embedded within the device in order for it to receive remote updates.
 
-``` manifest-tool init -a <api key> -S <mbed cloud API URL> -d <domain name> -m <model ID> --force ```
+``` manifest-tool init -a <api key> -S <mbed cloud API URL> -d <domain name> -m <model ID> --force ``` 
+
+Where mbed cloud API URL is https://api.us-east-1.mbedcloud.com/  . The domain name must have a ".com" as a mandatory requirement and the model ID can be an integer of your choice.
 
 Note the use of --force as this option overrides the defaults provided in the application. This is a mandatory parameter.
 
@@ -128,19 +130,21 @@ Note the use of --force as this option overrides the defaults provided in the ap
 
 11. Modify the main.cpp in the source directory to add a small printf statement - this is already provided in the code. So, you can un-comment this line in order to demo a FW update.
 
-12. Compile the new source with ``` mbed compile ``` command.
+12. Compile the new source with ``` mbed compile -t GCC_ARM -m MTB_MXCHIP_EMW3166 ``` command.
 
 13. You will now have a new binary in the BUILD\MTB_MXCHIP_EMW3166\GCC_ARM\ directory.
 
 14. Use the manifest-tool to perform a remote update on the device:
 
-``` manifest-tool update device -p <payload name> -D <device id> ``` where payload name is the full path to your new binary built from step 13 and device ID is the one obtained from step 9.
+``` manifest-tool update device -p <payload name> -D <device id> ``` 
+
+where payload name is the full path to your new binary built from step 13 and device ID is the one obtained from step 9.
 
 15. You will notice from the serial terminal that the device gets a request to update the FW, then this is authorized, then the download of the new FW starts, finishes and the bootloader verifies the authencity of the new FW, installs it on the device and reboots.
 
 16. You will now notice the new printf statement appear on the device logs which indicates that the newly built application binary is now installed and running on the device i.e. the device has been remotely updated.
 
-The logs should look like this on a serial terminal:
+The success logs should look like this on a serial terminal, although your device *will* be assigned a different device ID and will have a different IP address.
 
 ```
 ..\Modules\Reference_Apps\RD1168\mbed-cloud-example>mbed sterm -b 115200 -r
@@ -187,7 +191,22 @@ Simulated button clicked 12 times
 Simulated button clicked 13 times
 Simulated button clicked 14 times
 Simulated button clicked 15 times
-
+Simulated button clicked 16 times
+Simulated button clicked 17 times
+Simulated button clicked 18 times
+Simulated button clicked 19 times
+Simulated button clicked 20 times
+Simulated button clicked 21 times
+Simulated button clicked 22 times
+Simulated button clicked 23 times
+Simulated button clicked 24 times
+Simulated button clicked 25 times
+Simulated button clicked 26 times
+Simulated button clicked 27 times
+Simulated button clicked 28 times
+Simulated button clicked 29 times
+Simulated button clicked 30 times
+Simulated button clicked 31 times
 Firmware download requested
 Authorization granted
 Simulated button clicked 32 times
@@ -256,5 +275,21 @@ Simulated button clicked 12 times
 Simulated button clicked 13 times
 Simulated button clicked 14 times
 Simulated button clicked 15 times
+Simulated button clicked 16 times
+Simulated button clicked 17 times
+Simulated button clicked 18 times
+Simulated button clicked 19 times
+Simulated button clicked 20 times
+Simulated button clicked 21 times
+Simulated button clicked 22 times
+Simulated button clicked 23 times
+Simulated button clicked 24 times
+Simulated button clicked 25 times
+Simulated button clicked 26 times
+Simulated button clicked 27 times
+Simulated button clicked 28 times
+Simulated button clicked 29 times
+Simulated button clicked 30 times
+Simulated button clicked 31 times
 
 ```
