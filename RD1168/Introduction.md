@@ -1,4 +1,4 @@
-# Introduction:
+# RD1168 Introduction:
 
 The RD1168 Reference Design is a Pelion Ready design based on the hostless MXCHIP EMW3166 Wi-Fi module which includes an ST Microcontroller (STM32F412) and a Cypress Wi-Fi device (CYW43362).
 
@@ -24,3 +24,4 @@ Built on mbedOS, and includes Pelion Device Manager. This application has been c
 | --- | --- | --- | --- | --- | 
 |v1.0 | 5.9.5	| 1.3.3	| 14/09/2018 | Initial Release
 			
+RD1168
