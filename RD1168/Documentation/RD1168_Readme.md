@@ -1,13 +1,14 @@
-# Introduction:
+# Reference Application Introduction:
 
-This reference design is for the MXCHIP EMW3166 module and uses the MTB / MCB HW for implementation. The example uses "mbed-cloud-client" library that handles all the connection, registration and LWM2M resources. The example simulates a button press every 5 seconds and relays the packet to Arm Pelion IoT platform.
+This Reference Application is targetted specifically at the RD1168 Reference Design and is built on mbedOS and uses the "mbed-cloud-client" library to handle the Pelion Platform connection, registration and LWM2M resources. The application simulates a button press every 5 seconds and relays the packet to Arm Pelion IoT platform.
 
-The reference application also currently works on Mbed OS v5.9.5 and Mbed Cloud Client v1.3.3.
+The current version of the Reference Application uses: Mbed OS v5.9.5 and Mbed Cloud Client v1.3.3.
 
 # Pre-requisites:
 1. Hardware:
-    * MXCHIP EMW3166 MTB / MCB with SPI flash + micro USB cable.
-    * A WiFi access point.
+    * RD1168 based board or platform (the application was developed and tested using the Example Implemenation Hardware - MCB/MTB
+    * A micro USB cable
+    * A WiFi access point
 
 2. Software:
     * mbed CLI - https://github.com/ARMmbed/mbed-cli
