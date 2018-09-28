@@ -11,7 +11,7 @@ If you follow the logical design in these schematics your product will achieve M
 
 Below are links to all of the Reference Designs which have been developed to support the Pelion Cloud Platform:  
 
-###*Wi-Fi Reference Designs*
+### Wi-Fi Reference Designs
 
 WiFi needs little introduction, often found in commercial and home environments, its IP based to the edge and gives direct connectivity to the internet via a standard Access Point.  Click here to browse the available Mbed + Pelion WiFi designs. 
 
