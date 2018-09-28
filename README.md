@@ -6,10 +6,13 @@ These Reference Hardware designs consist of four main components: Radio, MCU, Me
 
 <img src="https://github.com/ARMmbed/reference-designs/blob/master/images/BlockDiagram.png">
 
+If you follow the logical design in these schematics your product will achieve Mbed Enabled and Pelion Ready certifications and therefore compatible with the entire Mbed Ecosystem.  Note, these designs are for the IoT subsystem not a complete end product, you will need to connect input and output devices of your choice but that’s typically very simple because our components page already has examples for over 500 different sensors and output transducers.
+
 
 Below are links to all of the Reference Designs which have been developed to support the Pelion Cloud Platform:  
 
 *Wi-Fi Reference Designs*
+WiFi needs little introduction, often found in commercial and home environments, its IP based to the edge and gives direct connectivity to the internet via a standard Access Point.  Click here to browse the available Mbed + Pelion WiFi designs. 
 
 <https://github.com/ARMmbed/reference-design-RD1552> - U-Blox ODIN-W2
 
