@@ -4,7 +4,7 @@ Reference Designs are tested and proven starting points targeted towards the cre
 
 These Reference Hardware designs consist of four main components: Radio, MCU, Memory and secure element; often two or more may be integrated in a single chip by some silicon vendors.  
 
-<span class="images">![](https://github.com/ARMmbed/reference-designs/images/Piccy.png)<span> </span></span>
+<span class="images">![](https://github.com/ARMmbed/reference-designs/images/BlockDiagram.png)<span> </span></span>
 
 
 Below are links to all of the Reference Designs which have been developed to support the Pelion Cloud Platform:  
