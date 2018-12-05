@@ -19,7 +19,7 @@ WiFi needs little introduction, often found in commercial and home environments,
 
 <https://github.com/ARMmbed/reference-design-RD1622> - Advantech WISE-1530
 
-<https://github.com/ARMmbed/reference-design-RD1168> - STM32F412 + CYW43362
+<https://github.com/ARMmbed/reference-design-RD1168> - MXCHIP EMW3166
 
-<https://github.com/ARMmbed/reference-design-RD1778> - STM32F412 + CYW43362
+<https://github.com/ARMmbed/reference-design-RD1778> - USI WM_BN_BM_22
 
