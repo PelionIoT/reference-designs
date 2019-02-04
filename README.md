@@ -27,6 +27,6 @@ WiFi needs little introduction, often found in commercial and home environments,
 
 ### NB-IoT Reference Designs
 
-NB_IoT (officially known as LTE Cat NB1) is a cellular communications standard which addresses the the LPWAN (low-power, wide-area network) market. Adopted in sereral markets such as Smart metering (electricity, gas, and water), facility management services, asset tracking and personal health monitors, and smart city infrastructure such as street lamps or dustbins.
+NB-IoT (or: LTE Cat NB1) is a cellular communications standard which addresses the the LPWAN (low-power, wide-area network) market. Adopted in sereral markets such as Smart metering (electricity, gas, and water), facility management services, asset tracking and personal health monitors, and smart city infrastructure such as street lamps or dustbins.
 
 <https://github.com/ARMmbed/reference-design-RD2541> - Advantech WISE-1570
