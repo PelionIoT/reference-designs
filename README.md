@@ -17,7 +17,7 @@ Below are links to all of the Reference Designs which have been developed to sup
 
 NB-IoT (or: LTE Cat NB1) is a cellular communications standard which addresses the the LPWAN (low-power, wide-area network) market. Adopted in sereral markets such as Smart metering (electricity, gas, and water), facility management services, asset tracking and personal health monitors, and smart city infrastructure such as street lamps or dustbins.
 
-[RD2166](https://github.com/ARMmbed/reference-design-RD2166) - Quectel BG96 + STM32L475 (coming soon!)
+[RD2166](https://github.com/ARMmbed/reference-design-RD2166) - Quectel BG96 + STM32L475
 
 [RD2541](https://github.com/ARMmbed/reference-design-RD2541) - Advantech WISE-1570
 
