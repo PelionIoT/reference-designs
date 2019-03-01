@@ -14,22 +14,22 @@ Below are links to all of the Reference Designs which have been developed to sup
 
 NB-IoT (or: LTE Cat NB1) is a cellular communications standard which addresses the the LPWAN (low-power, wide-area network) market. Adopted in sereral markets such as Smart metering (electricity, gas, and water), facility management services, asset tracking and personal health monitors, and smart city infrastructure such as street lamps or dustbins.
 
-<https://github.com/ARMmbed/reference-design-RD2166> - Quectel BG96 + STM32L475 (coming soon!)
+[RD2166](https://github.com/ARMmbed/reference-design-RD2166) - Quectel BG96 + STM32L475 (coming soon!)
 
-<https://github.com/ARMmbed/reference-design-RD2541> - Advantech WISE-1570
+[RD2541](https://github.com/ARMmbed/reference-design-RD2541) - Advantech WISE-1570
 
 
 ### Wi-Fi Reference Designs
 
 WiFi needs little introduction, often found in commercial and home environments, its IP based to the edge and gives direct connectivity to the internet via a standard Access Point.  Click here to browse the available Mbed + Pelion WiFi designs. 
 
-<https://github.com/ARMmbed/reference-design-RD1552> - U-Blox ODIN-W2
+[RD1552](https://github.com/ARMmbed/reference-design-RD1552) - U-Blox ODIN-W2
 
-<https://github.com/ARMmbed/reference-design-RD1622> - Advantech WISE-1530
+[RD1622](https://github.com/ARMmbed/reference-design-RD1622) - Advantech WISE-1530
 
-<https://github.com/ARMmbed/reference-design-RD1168> - MXCHIP EMW3166
+[RD1168](https://github.com/ARMmbed/reference-design-RD1168) - MXCHIP EMW3166
 
-<https://github.com/ARMmbed/reference-design-RD1778> - USI WM_BN_BM_22
+[RD1778](https://github.com/ARMmbed/reference-design-RD1778) - USI WM_BN_BM_22
 
 
 
